@@ -27,9 +27,8 @@ public class RazasP {
         
         
         
-        System.out.println("desea agregar otra raza?");
+        System.out.println("desea agregar otra raza?(SI/NO)");
         salir=leer.next();
-        
         
         razas.add(tipo);
     }
@@ -38,7 +37,7 @@ public class RazasP {
         }
     
     public void mostrarRazas(){
-        
+            
         for (String Ra : razas) {
             
             
