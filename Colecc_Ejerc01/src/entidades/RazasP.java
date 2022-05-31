@@ -19,20 +19,28 @@ public class RazasP {
     }
 
   
-
     public void crearRazas() {
-        
+        String salir="";
+        while(!salir.equalsIgnoreCase("NO")){
         System.out.println("ingrese una raza de perro");
         String tipo= leer.next();
-        System.out.println("La raza es: ");
+        
+        
+        
+        System.out.println("desea agregar otra raza?");
+        salir=leer.next();
+        
+        
         razas.add(tipo);
+    }
+        
 
         }
     
     public void mostrarRazas(){
         
         for (String Ra : razas) {
-            System.out.println("desea agregar otra raza?");
+            
             
             System.out.println(Ra);
         } 
