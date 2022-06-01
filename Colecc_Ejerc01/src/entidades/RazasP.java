@@ -40,7 +40,8 @@ public class RazasP {
 
             System.out.println(Ra);
         }
-        System.out.println("El tamano Arraylist es: "+razas.size());
+        // .size() muestra el tamano del Arraylist en Numero.  
+        System.out.println("El tamano Arraylist es: " + razas.size());
 
     }
 
@@ -52,25 +53,35 @@ la lista ordenada. Si el perro no se encuentra en la lista, se le informará al 
 se mostrará la lista ordenada.
      */
     public void mostraryeliminar() {
+        //variable para almacenar objeto que se va eliminar
         String borrar = "";
-        boolean ok=false;
-        Iterator <String> lista = razas.iterator();
+        // boolean p/ determinar si no existe la raza ingresada por el user
+        boolean ok = false;
+        // Iterador que recorre la el arrayslist "razas" y guardar en var.. lista
+        Iterator<String> lista = razas.iterator();
+
         System.out.println("ingrese la raza que desea eliminar de la lista: ");
         borrar = leer.nextLine();
-        while (lista.hasNext()&&!ok) {
-            
-            if (lista.next().toUpperCase().equals(borrar.toUpperCase()) ) {
+        /*
+        Object next(): Devuelve el siguiente elemento en la coleccion, mientras 
+         el metodo hasNext() retorne true. 
+        Este metodo es el que nos sirve para mostrar el elemento,
+         */
+        while (lista.hasNext() && !ok) {
+            //Opcional"" toUpper... para devolver el valor en MAYUSCULA   
+            if (lista.next().toUpperCase().equals(borrar.toUpperCase())) {
+                // remove : Elimina el elemento actual de la colección.
                 lista.remove();
                 System.out.println("La lista actual es: ");
+                // se muestra los objetos actuales q hay despues de borrar
                 mostrarRazas();
-                
-                ok=true;
+
+                ok = true;
             }
-           
         }
-           if(ok==false){
-               System.out.println("no se encontro la raza");
-           }
+        if (ok == false) {
+            System.out.println("no se encontro la raza");
+        }
     }
 
 }
