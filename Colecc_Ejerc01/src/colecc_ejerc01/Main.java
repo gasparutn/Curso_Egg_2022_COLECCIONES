@@ -13,7 +13,10 @@ public class Main {
        
      Serv.crearRazas();
      Serv.mostrarRazas();
-        
+     
+     Serv.mostraryeliminar();
+     
+             
     }
     
     
