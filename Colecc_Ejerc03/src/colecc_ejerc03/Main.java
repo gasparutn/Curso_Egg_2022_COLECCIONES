@@ -20,18 +20,18 @@ public class Main {
         String salir = "";
         while (!salir.equalsIgnoreCase("NO")) {
             Alumno A1 = new Alumno();
-            System.out.println("ingrese su nombre");
+            System.out.println("Ingrese un nombre: ");
             A1.setNombre(leer.next());
 
             ArrayList<Integer> notas = new ArrayList();
             for (int i = 0; i < 3; i++) {
-                System.out.println("ingrese 3 notas");
+                System.out.println("Ingrese una nota: "+(i+1));
                 notas.add(leer.nextInt());
             }
 
             A1.setNotas(notas);
 
-            System.out.println("desea crear otro alumno?(SI/NO)");
+            System.out.println("Desea crear otro alumno?(SI/NO)");
             salir = leer.next();
             alumnes.add(A1);
         }
