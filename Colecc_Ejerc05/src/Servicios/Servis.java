@@ -3,7 +3,6 @@ package Servicios;
 import entidades.Paises;
 import java.util.HashSet;
 import java.util.Iterator;
-
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
@@ -19,9 +18,9 @@ public class Servis {
         Paises Ps = new Paises();
         String opc = "SI";
         while (opc.equalsIgnoreCase("SI")) {
-            System.out.println("ingrese un pais: ");
+            System.out.println("Ingrese un Pais: ");
             Ps.setPais(leer.next());
-            System.out.println("desea ingresar otro pais? SI/NO");
+            System.out.println("Desea ingresar otro Pais? SI/NO");
             opc = leer.next();
             nombres.add(Ps.getPais());
         }
@@ -33,7 +32,7 @@ public class Servis {
 
     public void ordenaAZ() {
 
-        System.out.println("Ordenados alfabeticamente: ");
+        System.out.println("\nOrdenados alfabeticamente: ");
         TreeSet conjOrden = new TreeSet();
         conjOrden.addAll(nombres);
         System.out.println(conjOrden);
@@ -49,7 +48,7 @@ public class Servis {
         while (eliminaPais.hasNext() && !ok) {
             if (eliminaPais.next().toUpperCase().equals(borrar.toUpperCase())) {
                 eliminaPais.remove();
-                System.out.println("La lista nueva es: " + nombres + "\n");
+                System.out.println("\nLa lista nueva es: " + nombres);
 
                 ok = true;
             }

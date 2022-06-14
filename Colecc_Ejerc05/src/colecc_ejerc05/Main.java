@@ -9,25 +9,26 @@ en el conjunto.
 package colecc_ejerc05;
 
 import Servicios.Servis;
+
+/*
 import entidades.Paises;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
-
+ */
 public class Main {
 
     public static void main(String[] args) {
         /*
         METODO CON SERVICIOS
-        */
-                
+         */
         Servis Resul = new Servis();
         Resul.ingresarNombres();
         Resul.ordenaAZ();
         Resul.eliminarPais();
-         
+
         /*  METODO MAIN 
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         Set<String> nombres = new HashSet();
