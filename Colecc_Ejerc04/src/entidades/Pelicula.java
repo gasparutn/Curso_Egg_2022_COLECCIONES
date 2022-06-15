@@ -6,8 +6,6 @@ cuenta lo que se pide a continuación:
  */
 package entidades;
 
-import java.util.Objects;
-
 public class Pelicula {
 
     private String titulo;
